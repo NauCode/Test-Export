@@ -30,13 +30,13 @@
 
 
 <link rel="dns-prefetch" href="//export.yaxdev.com">
-<link rel="dns-prefetch" href="//fonts.googleapis.com">
+
 <link rel="dns-prefetch" href="//cdn.statically.io">
-<link href="https://fonts.gstatic.com" crossorigin rel="preconnect">
+
 <link rel="alternate" type="application/rss+xml" title="Dev Test &raquo; Feed" href="https://export.yaxdev.com/feed/">
 <link rel="alternate" type="application/rss+xml" title="Dev Test &raquo; Comments Feed" href="https://export.yaxdev.com/comments/feed/">
 <link rel="alternate" type="application/rss+xml" title="Dev Test &raquo; The Fastest WordPress Theme Comments Feed" href="https://export.yaxdev.com/the-fastest-wordpress-theme/feed/">
-<link rel="stylesheet" id="generate-fonts-css" href="//fonts.googleapis.com/css?family=Open+Sans:300,regular,italic,600,700" media="all">
+
 <link rel="stylesheet" id="wp-block-library-css" href="https://cdn.statically.io/wp/c/5.7/wp-includes/css/dist/block-library/style.min.css" media="all">
 <link rel="stylesheet" id="wpzoom-social-icons-block-style-css" href="https://export.yaxdev.com/wp-content/plugins/social-icons-widget-by-wpzoom/block/dist/blocks.style.build.css" media="all">
 <link rel="stylesheet" id="rate-my-post-css" href="https://export.yaxdev.com/wp-content/plugins/rate-my-post/public/css/rate-my-post.css" media="all">
@@ -113,7 +113,7 @@ body{background-color:#fafafa;color:#212121;}a{color:#1b78e2;}a:hover, a:focus, 
 		max-width: 100%;
 	}
 } /* End GeneratePress Site CSS */		</style>
-		</head>
+		<style>body{font-family:-apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif}code{font-family:Menlo,Consolas,Monaco,Liberation Mono,Lucida Console,monospace}</style></head>
 
 <body class="post-template-default single single-post postid-21 single-format-standard wp-embed-responsive post-image-above-header post-image-aligned-center sticky-menu-no-transition sticky-enabled both-sticky-menu right-sidebar nav-below-header separate-containers nav-search-enabled header-aligned-left dropdown-hover featured-image-active" itemtype="https://schema.org/Blog" itemscope>
 	<a class="screen-reader-text skip-link" href="#content" title="Skip to content">Skip to content</a>		<nav id="site-navigation" class="auto-hide-sticky has-branding main-navigation nav-align-right has-menu-bar-items sub-menu-right" itemtype="https://schema.org/SiteNavigationElement" itemscope>
@@ -276,6 +276,15 @@ body{background-color:#fafafa;color:#212121;}a{color:#1b78e2;}a:hover, a:focus, 
 		</div>
 
 <script src="https://export.yaxdev.com/wp-content/plugins/gp-premium/menu-plus/functions/js/sticky.min.js" id="generate-sticky-js"></script>
+<script id="flying-pages-js-before">
+window.FPConfig= {
+	delay: 0,
+	ignoreKeywords: ["\/wp-admin","\/wp-login.php","\/cart","\/checkout","add-to-cart","logout","#","?",".png",".jpeg",".jpg",".gif",".svg",".webp"],
+	maxRPS: 3,
+    hoverDelay: 50
+};
+</script>
+<script src="https://export.yaxdev.com/wp-content/plugins/flying-pages/flying-pages.min.js" id="flying-pages-js" defer></script>
 <script id="rate-my-post-js-extra">
 var rmp_frontend = {"admin_ajax":"https:\/\/export.yaxdev.com\/wp-admin\/admin-ajax.php","postID":"21","noVotes":"No votes so far! Be the first to rate this post.","cookie":"You already voted! This vote will not be counted!","afterVote":"Thank you for rating this post!","notShowRating":"1","social":"1","feedback":"1","cookieDisable":"1","emptyFeedback":"Please insert your feedback in the box above!","hoverTexts":"1","preventAccidental":"1","grecaptcha":"1","siteKey":"","votingPriv":"1","loggedIn":"","positiveThreshold":"2","ajaxLoad":"1","nonce":"22b2e34bd2"};
 </script>
@@ -294,6 +303,6 @@ var generatepressNavSearch = {"open":"Open Search Bar","close":"Close Search Bar
 </script>
 <script src="https://export.yaxdev.com/wp-content/themes/generatepress/assets/js/navigation-search.min.js" id="generate-navigation-search-js"></script>
 <script src="https://export.yaxdev.com/wp-content/plugins/social-icons-widget-by-wpzoom/assets/js/social-icons-widget-frontend.js" id="zoom-social-icons-widget-frontend-js"></script>
-
+<script>(function(a,b,c){var d=a.history,e=document,f=navigator||{},g=localStorage,h=encodeURIComponent,i=d.pushState,k=function(){return Math.random().toString(36)},l=function(){return g.cid||(g.cid=k()),g.cid},m=function(r){var s=[];for(var t in r)r.hasOwnProperty(t)&&void 0!==r[t]&&s.push(h(t)+"="+h(r[t]));return s.join("&")},n=function(r,s,t,u,v,w,x){var z="https://www.google-analytics.com/collect",A=m({v:"1",ds:"web",aip:c.anonymizeIp?1:void 0,tid:b,cid:l(),t:r||"pageview",sd:c.colorDepth&&screen.colorDepth?screen.colorDepth+"-bits":void 0,dr:e.referrer||void 0,dt:e.title,dl:e.location.origin+e.location.pathname+e.location.search,ul:c.language?(f.language||"").toLowerCase():void 0,de:c.characterSet?e.characterSet:void 0,sr:c.screenSize?(a.screen||{}).width+"x"+(a.screen||{}).height:void 0,vp:c.screenSize&&a.visualViewport?(a.visualViewport||{}).width+"x"+(a.visualViewport||{}).height:void 0,ec:s||void 0,ea:t||void 0,el:u||void 0,ev:v||void 0,exd:w||void 0,exf:"undefined"!=typeof x&&!1==!!x?0:void 0});if(f.sendBeacon)f.sendBeacon(z,A);else{var y=new XMLHttpRequest;y.open("POST",z,!0),y.send(A)}};d.pushState=function(r){return"function"==typeof d.onpushstate&&d.onpushstate({state:r}),setTimeout(n,c.delay||10),i.apply(d,arguments)},n(),a.ma={trackEvent:function o(r,s,t,u){return n("event",r,s,t,u)},trackException:function q(r,s){return n("exception",null,null,null,null,r,s)}}})(window,"",{anonymizeIp:!0,colorDepth:!0,characterSet:!0,screenSize:!0,language:!0})</script>
 </body>
 </html>
