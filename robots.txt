@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /wp-admin/
 Allow: /wp-admin/admin-ajax.php
 
-Sitemap: https://export.yaxdev.com/wp-sitemap.xml
+Sitemap: https://export.yaxdev.com/sitemap_index.xml
