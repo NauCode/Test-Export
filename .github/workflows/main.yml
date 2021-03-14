@@ -6,9 +6,8 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches:
+      - master
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -16,16 +15,28 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  sitemap_job:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    name: Generate a sitemap
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - name: Checkout the repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
-      - name: generate-sitemap
+      - name: Generate the sitemap
+        id: sitemap
         # You may pin to the exact commit or the version.
         # uses: cicirello/generate-sitemap@08c011217a5c79efa5a6bb8890455372b1f0553b
         uses: cicirello/generate-sitemap@v1.6.2
+        with:
+          base-url-path: https://export.yaxdev.com/
+      - name: Output stats
+        run: |
+          echo "sitemap-path = ${{ steps.sitemap.outputs.sitemap-path }}"
+          echo "url-count = ${{ steps.sitemap.outputs.url-count }}"
+          echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
